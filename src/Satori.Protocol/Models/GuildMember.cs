@@ -16,6 +16,11 @@ public class GuildMember
     public string? Name { get; set; }
 
     /// <summary>
+    /// 用户在群组中的昵称
+    /// </summary>
+    public string? Nick { get; set; }
+
+    /// <summary>
     /// 用户在群组中的头像
     /// </summary>
     public string? Avatar { get; set; }

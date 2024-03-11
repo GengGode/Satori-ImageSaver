@@ -26,4 +26,16 @@ internal class SatoriHttpApiService : ISatoriApiService
         var data = await response.Content.ReadFromJsonAsync<TData>(SatoriClient.JsonOptions);
         return data!;
     }
+
+    public async Task<byte[]> GetFileAsync(string endpoint, string platform, string selfId)
+    {
+        var request = new HttpRequestMessage(HttpMethod.Get, endpoint);
+        request.Headers.Add("X-Platform", platform);
+        request.Headers.Add("X-Self-ID", selfId);
+
+        var response = await _http.SendAsync(request);
+
+        var data = await response.Content.ReadAsByteArrayAsync();
+        return data!;
+    }
 }

@@ -1,5 +1,5 @@
-﻿using System.Text.Json;
-using Satori.Client.Internal;
+﻿using Satori.Client.Internal;
+using System.Text.Json;
 
 namespace Satori.Client;
 

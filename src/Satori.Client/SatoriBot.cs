@@ -22,6 +22,11 @@ public partial class SatoriBot
         return _client.ApiService.SendAsync<TData>(endpoint, _platform, _selfId, body);
     }
 
+    private Task<byte[]> GetFileAsync(string endpoint)
+    {
+        return _client.ApiService.GetFileAsync(endpoint, _platform, _selfId);
+    }
+
     private void EventRaiser(object? sender, Event e)
     {
         if (!e.Platform.Equals(_platform, StringComparison.OrdinalIgnoreCase) ||

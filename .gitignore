@@ -12,3 +12,5 @@ docs/.vitepress/cache
 docs/.vitepress/dist
 docs/api/*.md
 docs/!api/index.md
+/.vs
+/examples/Satori.Client.Example/Properties/PublishProfiles
